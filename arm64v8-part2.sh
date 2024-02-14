@@ -5,6 +5,8 @@
 
 git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
 
+sed -i 's/TARGET_CFLAGS += -DHAVE_MAP_SYNC/TARGET_CFLAGS += -DHAVE_MAP_SYNC -D_LARGEFILE64_SOURCE/' feeds/packages/utils/xfsprogs/Makefile
+
 # ==========openclash===========
 cd package
 git clone --depth=1 --filter=blob:none --sparse https://github.com/vernesong/OpenClash.git
